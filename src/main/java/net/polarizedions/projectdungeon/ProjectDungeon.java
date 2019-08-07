@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package net.polarizedions.projectdungeon;
 
 import de.ellpeck.rockbottom.api.IApiHandler;
 import de.ellpeck.rockbottom.api.IGameInstance;
