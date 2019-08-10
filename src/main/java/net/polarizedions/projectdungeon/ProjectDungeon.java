@@ -6,6 +6,7 @@ import de.ellpeck.rockbottom.api.assets.IAssetManager;
 import de.ellpeck.rockbottom.api.event.IEventHandler;
 import de.ellpeck.rockbottom.api.mod.IMod;
 import de.ellpeck.rockbottom.api.util.reg.ResourceName;
+import net.polarizedions.projectdungeon.init.Resources;
 import net.polarizedions.projectdungeon.init.Tiles;
 
 import java.util.logging.Logger;
@@ -71,5 +72,10 @@ public class ProjectDungeon implements IMod{
     @Override
     public void postInitAssets(IGameInstance game, IAssetManager assetManager, IApiHandler apiHandler){
 
+    }
+
+    @Override
+    public void initAssets(IGameInstance game, IAssetManager assetManager, IApiHandler apiHandler) {
+        assetManager.getShaderProgram(Resources.DUNGEON_WALL).setDefaultValues(game.getWidth(), game.getHeight());
     }
 }
