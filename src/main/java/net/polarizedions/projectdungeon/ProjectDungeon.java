@@ -6,16 +6,17 @@ import de.ellpeck.rockbottom.api.assets.IAssetManager;
 import de.ellpeck.rockbottom.api.event.IEventHandler;
 import de.ellpeck.rockbottom.api.mod.IMod;
 import de.ellpeck.rockbottom.api.util.reg.ResourceName;
+import net.polarizedions.projectdungeon.init.Tiles;
 
 import java.util.logging.Logger;
 
-public class ExampleMod implements IMod{
+public class ProjectDungeon implements IMod{
 
-    public static ExampleMod instance;
+    public static ProjectDungeon instance;
 
     private Logger modLogger;
 
-    public ExampleMod(){
+    public ProjectDungeon(){
         instance = this;
     }
 
@@ -29,12 +30,12 @@ public class ExampleMod implements IMod{
 
     @Override
     public String getDisplayName(){
-        return "ExampleMod";
+        return "Project Dungeon";
     }
 
     @Override
     public String getId(){
-        return "examplemod";
+        return "projectdungeon";
     }
 
     @Override
@@ -44,12 +45,12 @@ public class ExampleMod implements IMod{
 
     @Override
     public String getResourceLocation(){
-        return "assets/examplemod";
+        return "assets/projectdungeon";
     }
 
     @Override
     public String getDescription(){
-        return "This is the example mod for RockBottom";
+        return "Adds fun dungeons to RockBottom";
     }
 
     @Override
@@ -59,16 +60,16 @@ public class ExampleMod implements IMod{
 
     @Override
     public void preInit(IGameInstance game, IApiHandler apiHandler, IEventHandler eventHandler){
-        this.modLogger.info("Starting ExampleMod for RockBottom");
+
     }
 
     @Override
     public void init(IGameInstance game, IApiHandler apiHandler, IEventHandler eventHandler){
-        //Etc
+        Tiles.init();
     }
 
     @Override
     public void postInitAssets(IGameInstance game, IAssetManager assetManager, IApiHandler apiHandler){
-        this.modLogger.info("Localized text: "+assetManager.localize(new ResourceName(this, "test")));
+
     }
 }

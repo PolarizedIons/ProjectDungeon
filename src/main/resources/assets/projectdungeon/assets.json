@@ -1,0 +1,16 @@
+{
+    "loc.": {
+        "us_english": "/loc/us_english.json"
+    },
+    "tex.": {
+        "tiles.": {
+            "dungeon_wall": "/tiles/dungeon_wall.png"
+        }
+    },
+    "shader.": {
+        "dungeon_wall": {
+            "vertex": "/shaders/dungeon_wall.vert",
+            "fragment": "/shaders/dungeon_wall.frag"
+        }
+    }
+}
