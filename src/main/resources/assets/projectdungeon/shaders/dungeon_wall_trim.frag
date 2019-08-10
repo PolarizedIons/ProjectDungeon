@@ -14,11 +14,12 @@ uniform sampler2D texImage;
 uniform int time;
 uniform vec2 resolution;
 
-vec3 colorA = vec3(1.0, 1.0, 1.0);
-vec3 colorB = vec3(0.4, 0.4, 0.4);
+vec3 backgroundColour = vec3(15 / 255.0, 14 / 255.0, 56 / 255.0);
+vec3 plotColour = vec3(71 / 255.0, 68 / 255.0, 212 / 255.0);
+
 
 float plot (vec2 st, float pct){
-    return smoothstep(pct-0.01, pct, st.y) - smoothstep(pct, pct+0.01, st.y);
+    return smoothstep(pct-0.05, pct, st.y) - smoothstep(pct, pct+0.05, st.y);
 }
 
 void main(){
@@ -28,11 +29,11 @@ void main(){
     if (textureColor.rgb == vec3(1, 1, 1)) {
         vec3 pct = vec3(st.x);
 
-        pct.g = smoothstep(0.0,1.000, st.x) + tan(time / 100.0);// + tan(time / 100.0);
+        pct.g = st.x + tan(time / 64.0);// + tan(time / 100.0);
 
-        vec3 color = colorB; //textureColor.rgb * vertexColorPass.rgb; // mix(colorA, colorB, pct.r);
+        vec3 color = backgroundColour; //textureColor.rgb * vertexColorPass.rgb; // mix(colorA, colorB, pct.r);
 
-        color = mix(color, colorA, plot(st, pct.g));
+        color = mix(color, plotColour, plot(st, pct.g));
 
         fragColor = vec4(color, 1.0) * vertexColorPass;
     }

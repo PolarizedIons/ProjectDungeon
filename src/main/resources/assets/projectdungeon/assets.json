@@ -4,13 +4,14 @@
     },
     "tex.": {
         "tiles.": {
+            "dungeon_wall_trim": "/tiles/dungeon_wall_trim.png",
             "dungeon_wall": "/tiles/dungeon_wall.png"
         }
     },
     "shader.": {
-        "dungeon_wall": {
-            "vertex": "/shaders/dungeon_wall.vert",
-            "fragment": "/shaders/dungeon_wall.frag"
+        "dungeon_wall_trim": {
+            "vertex": "/shaders/dungeon_wall_trim.vert",
+            "fragment": "/shaders/dungeon_wall_trim.frag"
         }
     }
 }

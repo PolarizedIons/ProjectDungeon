@@ -76,6 +76,6 @@ public class ProjectDungeon implements IMod{
 
     @Override
     public void initAssets(IGameInstance game, IAssetManager assetManager, IApiHandler apiHandler) {
-        assetManager.getShaderProgram(Resources.DUNGEON_WALL).setDefaultValues(game.getWidth(), game.getHeight());
+        assetManager.getShaderProgram(Resources.DUNGEON_WALL_TRIM).setDefaultValues(game.getWidth(), game.getHeight());
     }
 }
