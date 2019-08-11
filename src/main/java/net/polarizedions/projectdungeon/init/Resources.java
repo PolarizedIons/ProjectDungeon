@@ -7,4 +7,5 @@ import static net.polarizedions.projectdungeon.ProjectDungeon.createRes;
 public class Resources {
     public static final ResourceName DUNGEON_WALL_TRIM = createRes("dungeon_wall_trim");
     public static final ResourceName DUNGEON_WALL = createRes("dungeon_wall");
+    public static final ResourceName DUNGEON_LAMP = createRes("dungeon_lamp");
 }
