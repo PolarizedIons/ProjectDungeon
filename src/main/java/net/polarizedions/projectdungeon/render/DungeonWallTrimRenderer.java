@@ -25,6 +25,5 @@ public class DungeonWallTrimRenderer extends DefaultTileRenderer<DungeonWallTrim
         shader.setUniform("resolution", RockBottomAPI.getGame().getWidth(), RockBottomAPI.getGame().getHeight());
         g.setProgram(shader);
         super.render(game, manager, g, world, tile, state, x, y, layer, renderX, renderY, scale, light);
-        g.setProgram(null);
     }
 }

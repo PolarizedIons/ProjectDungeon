@@ -1,5 +1,8 @@
 {
     "projectdungeon": {
-        "dungeon_wall_trim": "Dungeon Wall Trim"
+        "item.": {
+            "dungeon_wall_trim": "Dungeon Wall Trim",
+            "dungeon_wall": "Dungeon Wall"
+        }
     }
 }
