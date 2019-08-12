@@ -24,9 +24,4 @@ public class DungeonWallTrim extends TileBasic {
     protected ITileRenderer createRenderer(ResourceName name) {
         return new DungeonWallTrimRenderer(name);
     }
-
-    @Override
-    public List<ItemInstance> getDrops(IWorld world, int x, int y, TileLayer layer, Entity destroyer) {
-        return Collections.singletonList(new ItemInstance(Tiles.DUNGEON_WALL_TRIM));
-    }
 }

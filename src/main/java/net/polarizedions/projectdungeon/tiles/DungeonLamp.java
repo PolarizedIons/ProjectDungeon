@@ -48,9 +48,4 @@ public class DungeonLamp extends TileBasic {
     public boolean canStay(IWorld world, int x, int y, TileLayer layer, int changedX, int changedY, TileLayer changedLayer) {
         return ! world.getState(TileLayer.BACKGROUND, x, y).getTile().isAir();
     }
-
-    @Override
-    public List<ItemInstance> getDrops(IWorld world, int x, int y, TileLayer layer, Entity destroyer) {
-        return Collections.singletonList(new ItemInstance(Tiles.DUNGEON_LAMP));
-    }
 }
